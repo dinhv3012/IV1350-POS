@@ -11,8 +11,11 @@ public class View {
 
     public View(Controller contr) {
         this.contr = contr;
-
+    }
+    
+    public void runExample() {
         contr.startSale();
+        System.out.println("Start new sale.");
         contr.addItemToSale(1);
         contr.addItemToSale(1);
         contr.addItemToSale(2);
@@ -20,5 +23,4 @@ public class View {
         contr.endSale();
         contr.recievesPayment(200);
     }
-
 }
