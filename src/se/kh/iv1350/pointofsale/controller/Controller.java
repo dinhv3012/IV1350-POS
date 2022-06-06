@@ -39,10 +39,11 @@ public class Controller {
      * Retrieves information from inventory system and adds that item to the sale.
      * @param scannedItemId barcode from scanned item, for this application it will be a pre-set integer.
      */
-    public void addItemToSale(int scannedItemId)
+    public ItemDTO addItemToSale(int scannedItemId)
     {
-        ItemDTO itemDTO = inventorySystem.retrieveItemInformation(scannedItemId);
-        sale.addItemToSale(itemDTO);
+        ItemDTO item = inventorySystem.retrieveItemInformation(scannedItemId);
+        sale.addItemToSale(item);
+        return item;
     }
 
     /**
