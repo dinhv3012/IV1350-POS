@@ -15,7 +15,6 @@ public class View {
     
     public void runExample() {
         contr.startSale();
-        System.out.println("Start new sale.");
         contr.addItemToSale(1);
         contr.addItemToSale(1);
         contr.addItemToSale(2);
